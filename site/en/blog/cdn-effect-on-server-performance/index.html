@@ -181,10 +181,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <p>This web site backend was created with <strong>.NET MVC</strong> and no other structure was used.</p>
 <p>Before making any changes on the code, I started to analyze what the problem could be. I found a few things to fix. The first problem is that, all static assets were stored in the web server, from where the web site is published. It means that the web server had to deal with serving all of these static files. On the home page there were 53 Javascript files (mostly non-minified), 20 CSS (mostly non-minified), 77 images, 5 media files and 6 font files. In total, <strong>5.9MB</strong>. These size and file counts are also another fiasco.</p>
 <p>I published this web site to Azure Web App (S1) and tested it via Load Test. The test sent 20K users in 5 min to the homepage only. Here are the test results.</p>
-<p><img src="https://cdn.image4.io/i4io/f_auto/blog-images/Opera-Snapshot-2018-08-10-125753-portal.azure.com.png" alt="Test 1 result"></p>
+<p><img src="img/blog-images/Opera-Snapshot-2018-08-10-125753-portal.azure.com.png" alt="Test 1 result"></p>
 <p>As seen from this report, 97% of 1.471.257 requests have <em>failed</em>.</p>
 <p>When I got to the root of the problem, I saw that it was mostly about the &quot;static content&quot;. So, I decided to move these contents to CDN (content delivery network) and a separate storage and then tested it again. The tester sent 2.173.109 requests at the same time and 87% of them were <em>successful</em>.</p>
-<p><img src="https://cdn.image4.io/i4io/f_auto/blog-images/Opera-Snapshot-2018-08-10-125916-portal.azure.com.png" alt="Test 2 result"></p>
+<p><img src="img/blog-images/Opera-Snapshot-2018-08-10-125916-portal.azure.com.png" alt="Test 2 result"></p>
 <p>Using &quot;CDN&quot; and a &quot;separate storage&quot; for &quot;static assets&quot; carry great importance on web performance.</p>
 <p>That's it.</p>
 <p>I hope this post helps you.</p>
