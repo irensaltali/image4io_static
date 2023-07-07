@@ -1,0 +1,9 @@
+﻿User-Agent: *
+Allow: 
+Disallow: /css
+Disallow: /js
+Disallow: /img
+Disallow: /fonts
+Disallow: /data
+
+Sitemap: https://image4.io/sitemap.xml

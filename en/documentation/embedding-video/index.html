@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Embedding video to the site | image4io</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5P7G6N');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Styles -->
+<link href="https://image4.io/css/site.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=57">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=60">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=72">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=75&">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=114">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=120">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=144">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=152">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=180">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://cdn.image4.io/i4io/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.image4.io/i4io/favicon/favicon.png?w=16">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.image4.io/i4io/favicon/favicon.png?w=32">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.image4.io/i4io/favicon/favicon.png">
+    <link rel="manifest" href="https://image4.io/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://cdn.image4.io/i4io/favicon/ms-icon-310x310.png?w=144&f=auto">
+    <meta name="theme-color" content="#ffffff">  <link rel="icon" href="/en/documentation/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://image4.io/en/documentation/embedding-video/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://image4.io/en/documentation/embedding-video/amp/" />
+    
+    <meta property="og:site_name" content="image4io Documentation" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Embedding video to the site" />
+    <meta property="og:description" content="Image4io provides several formats for the video that are uploaded. You can embed videos by using mp4 and HLS formats as following tutorial.  MP4:We used a javascript video library called Video-js to demonstrate embedding videos to the website. Video-js is a good choice because its ease of use. Here" />
+    <meta property="og:url" content="https://image4.io/en/documentation/embedding-video/" />
+    <meta property="article:published_time" content="2020-12-06T13:20:54.000Z" />
+    <meta property="article:modified_time" content="2020-12-06T13:21:23.000Z" />
+    <meta property="article:tag" content="Tutorial" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Embedding video to the site" />
+    <meta name="twitter:description" content="Image4io provides several formats for the video that are uploaded. You can embed videos by using mp4 and HLS formats as following tutorial.  MP4:We used a javascript video library called Video-js to demonstrate embedding videos to the website. Video-js is a good choice because its ease of use. Here" />
+    <meta name="twitter:url" content="https://image4.io/en/documentation/embedding-video/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="image4io" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Tutorial" />
+    <meta name="twitter:site" content="@tryghost" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "image4io Documentation",
+        "url": "https://image4.io/en/documentation/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "image4io",
+        "url": "https://image4.io/en/documentation/author/image4io/",
+        "sameAs": []
+    },
+    "headline": "Embedding video to the site",
+    "url": "https://image4.io/en/documentation/embedding-video/",
+    "datePublished": "2020-12-06T13:20:54.000Z",
+    "dateModified": "2020-12-06T13:21:23.000Z",
+    "keywords": "Tutorial",
+    "description": "Image4io provides several formats for the video that are uploaded. You can embed\nvideos by using mp4 and HLS formats as following tutorial. \n\nMP4:\nWe used a javascript video library called Video-js to demonstrate embedding\nvideos to the website. Video-js is a good choice because its ease of use. Here\nis the code snippet to put mp4 video to page:\n\n&lt;head&gt;\n  &lt;link href&#x3D;&quot;https://vjs.zencdn.net/7.8.4/video-js.css&quot; rel&#x3D;&quot;stylesheet&quot; /&gt;\n\n  &lt;!-- If you&#x27;d like to support IE8 (for Video.js versions prior t",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://image4.io/en/documentation/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.39" />
+    <link rel="alternate" type="application/rss+xml" title="image4io Documentation" href="https://image4.io/en/documentation/rss/" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "image4.io",
+        "item": "https://image4.io"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "documentation",
+        "item": "https://image4.io/documentation"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": Embedding video to the site,
+        "item": "https://image4.io/documentation/knowledge-base/Embedding video to the site"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5P7G6N" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+<!-- Topbar -->
+  <section class="topbar d-lg-flex text-white bg-transparent">
+    <div class="container small-3">
+      <nav class="nav">
+        <div class="navbar-left">
+          <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+          <a class="nav-link" href="https://image4.io/en/integrations">Integrations</a>
+          <a class="nav-link" href="https://image4.io/en/migrations">Migrations</a>
+          <a class="nav-link" href="https://image4.io/en/career">Career</a>
+          <a class="nav-link" href="https://image4.io/en/team">Team</a>
+          <a class="nav-link" href="https://image4.io/en/documentation">Support</a>
+          <a class="nav-link" href="https://image4.io/en/how-it-works">How It Works</a>
+          <a class="nav-link" href="https://console.image4.io/Auth/Login">Log in</a>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+  <!-- /.topbar -->
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <div class="container mt-3 mb-3">
+
+        <div id="navbarLogoContainer pb-1 pt-1" class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="https://image4.io">
+            <img class="logo-dark" src="https://cdn.image4.io/i4io/logo-dark-side.png" alt="logo">
+            <img class="logo-light" src="https://cdn.image4.io/i4io/logo-light-side.png" alt="logo">
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <ul class="nav nav-navbar ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://webspeedtest.image4.io/">WEB SPEED TEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://console.image4.io/Auth/SignUp">SIGN UP</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav><!-- /.navbar -->
+
+
+    <!-- Header -->
+
+    <!-- Header -->
+    <header class="header text-center text-white"
+      style="background-image: url(https://cdn.image4.io/i4io/f_auto/documentation-images/kb.png)">
+      <div class="overlay opacity-90" style="background-color: #0079bf"></div>
+      <div class="container mt-1">
+        <h3>Embedding video to the site</h3>
+      </div>
+    </header><!-- /.header -->
+
+  
+<!-- Main Content -->
+<main class="main-content">
+
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Breadcrumbs
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <nav class="bb-1" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb px-0">
+        <li class="breadcrumb-item"><a href="/en/documentation">Documentation</a></li>
+        <li class="breadcrumb-item"><a href="/en/documentation/knowledge-base">Knowledge Base</a></li>
+        <li class="breadcrumb-item">Embedding video to the site</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="row">
+
+      <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Article
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+      <div class="col-md-7 col-xl-8 mr-md-auto py-8">
+        <article>
+          <h2>Embedding video to the site</h2>
+          <p>Image4io provides several formats for the video that are uploaded. You can embed videos by using mp4 and HLS formats as following tutorial. </p><h3 id="mp4-">MP4:</h3><p>We used a javascript video library called Video-js to demonstrate embedding videos to the website. Video-js is a good choice because its ease of use. Here is the code snippet to put mp4 video to page:</p><pre><code class="language-html">&lt;head&gt;
+  &lt;link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" /&gt;
+
+  &lt;!-- If you'd like to support IE8 (for Video.js versions prior to v7) --&gt;
+  &lt;script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    data-setup="{}"
+  &gt;
+    &lt;source src="MY_VIDEO.mp4" type="video/mp4" /&gt;
+    &lt;p class="vjs-no-js"&gt;
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      &lt;a href="https://videojs.com/html5-video-support/" target="_blank"
+        &gt;supports HTML5 video&lt;/a
+      &gt;
+    &lt;/p&gt;
+  &lt;/video&gt;
+
+  &lt;script src="https://vjs.zencdn.net/7.8.4/video.js"&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre><p>You need to provide your video's URL in the place of "MY_VIDEO.mp4" above. You can obtain your mp4 video URL as following:</p><!--kg-card-begin: html--><img src="https://cdn.image4.io/i4io/f_auto/documentation-images/mp4-embed.png"><!--kg-card-end: html--><p></p><p></p><h3 id="hls-recommended-">HLS (Recommended)</h3><p>Video-js library can also be used to embed HLS videos to the page. Here is the example snippet from <a href="https://videojs.github.io/videojs-contrib-hls/">official documentation</a>:</p><pre><code class="language-html">&lt;html&gt;
+
+  &lt;head&gt;
+      &lt;title&gt;image4.io Video Preview Page via Video-js&lt;/title&gt;
+      &lt;link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video-js.min.css" rel="stylesheet"&gt;
+      &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/6.7.3/video.min.js"&gt;&lt;/script&gt;
+
+      &lt;script src="./videojs-contrib-hls.min.js"&gt;&lt;/script&gt;
+
+  &lt;/head&gt;
+  
+  &lt;body&gt;
+      &lt;div class="centered"&gt;
+        &lt;video id=example-video width=960 height=540 class="video-js vjs-default-skin" controls&gt;
+          &lt;source
+             src="MY_VIDEO.m3u8"
+             type="application/x-mpegURL"&gt;
+        &lt;/video&gt;
+        &lt;script src="video.js"&gt;&lt;/script&gt;
+        &lt;script src="videojs.hls.min.js"&gt;&lt;/script&gt;
+        &lt;script&gt;
+        var player = videojs('example-video');
+        player.play();
+        &lt;/script&gt;
+      &lt;/div&gt;    
+  
+
+  &lt;/body&gt;
+  
+  &lt;/html&gt;</code></pre><p>To run the code above, videojs-contrib-hls.min.js must be downloaded from the <a href="https://github.com/videojs/videojs-contrib-hls/releases/latest">official repository</a> and placed in the same folder with the code. And "MY_VIDEO.m3u8" must be replaced with the .m3u8 stream format of your video which can be obtained from the image4io console as below:</p><!--kg-card-begin: html--><img src="https://cdn.image4.io/i4io/f_auto/documentation-images/hls-embed.png"><!--kg-card-end: html--><p>You can find the implementation of of above code in the iamge4io watch page which you can go with the button below. </p><!--kg-card-begin: html--><img src="https://cdn.image4.io/i4io/f_auto/documentation-images/watch-video.png"><!--kg-card-end: html--><p>For further options like adding a quality selector or customizing the UI of video elements, you can visit the <a href="https://videojs.com/">Video-js documentation.</a></p>
+
+        </article>
+      </div>
+
+
+
+      <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Sidebar
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+
+
+
+      <div class="col-md-4 col-xl-3 d-none d-md-block">
+        <aside class="sidebar">
+          <h6>Related Articles</h6>
+
+          <ul class="nav flex-column">
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/embedding-video/>Embedding video to the site</a>
+
+            </li>
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/migrating-your-files-from-aws-s3/>Migrating Your Images From AWS S3</a>
+
+            </li>
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/creating-purge-request/>Creating Purge Request</a>
+
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+</main><!-- /.main-content -->
+
+
+
+
+
+  <!-- Footer -->
+  <!-- Footer -->
+<footer class="footer bg-gray pl-9 pr-9 ">
+  <div class="container">
+      <div class="row gap-y align-items-center">
+
+
+
+          <div class="col-md-6 col-xl-4">
+              <p><a href="https://image4.io/en"><img class="lazyload" src="https://cdn.image4.io/i4io/logo-dark.png?w=300" alt="logo"></a></p>
+              <p>image4io speeds up the images' load time: optimization, delivery, storage; all-in-one platform</p>
+          </div>
+
+          <div class="col-6 col-md-3 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Information</strong></h6>
+              <div class="nav flex-column">
+
+
+                      <a class="nav-link" href="https://image4.io/en/blog/what-is-multi-cdn/">Multi CDN</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/webp-new-format-for-web-images/">WebP</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/how-to-speed-up-your-website/">Web Performance</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/cdn-effect-on-server-performance/">CDN Effect</a>
+
+              </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Product</strong></h6>
+              <div class="nav flex-column">
+                  <a class="nav-link" href="https://image4.io/en/pricing">Pricing</a>
+                  <a class="nav-link" href="https://image4.io/en/team">Team</a>
+                  <a class="nav-link" href="https://image4.io/en/career">Career</a>
+                  <br />
+              </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Support</strong></h6>
+              <div class="nav flex-column">
+                  <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+                  <a class="nav-link" href="https://image4.io/en/contact">Contact</a>
+                  <a class="nav-link" href="https://image4.io/en/privacy-policy">Privacy Policy</a>
+                  <a class="nav-link" href="https://image4.io/en/distant-sales-contract">Distant Sales Contract</a>
+              </div>
+          </div>
+
+
+          <div class="col-12">
+              <hr class="my-0">
+          </div>
+
+          <div class="col-md-3 text-center text-md-left">
+              <small>&copy; 2019 Image4io. All rights reserved.</small>
+          </div>
+
+          <div class="col-md-6 text-center">
+              <div class="social social-sm social-hover-bg-brand">
+                  <a class="social-facebook" target="_blank" href="https://www.facebook.com/image4io"><i class="fa fa-facebook"></i></a>
+                  <a class="social-twitter" target="_blank" href="https://twitter.com/image4io"><i class="fa fa-twitter"></i></a>
+                  <a class="social-linkedin" target="_blank" href="https://www.linkedin.com/company/image4io"><i class="fa fa-linkedin"></i></a>
+                  <a class="social-git" target="_blank" href="https://github.com/Image4io"><i class="fa fa-github"></i></a>
+                  <a class="social-instagram" target="_blank" href="https://www.instagram.com/image4io/"><i class="fa fa-instagram"></i></a>
+                  <a class="social-youtube" target="_blank" href="https://www.youtube.com/channel/UCsqdCRb7WoAKIyr5TRK36dQ"><i class="fa fa-youtube"></i></a>
+                  <a class="social-soundcloud" target="_blank" href="https://www.producthunt.com/upcoming/image4io-full-stack-image-management"><i class="fa fa-product-hunt"></i></a>
+                  <a class="social-medium" target="_blank" href="https://medium.com/image4io"><i class="fa fa-medium"></i></a>
+                  <a class="social-git" target="_blank" href="https://www.indiehackers.com/product/image4io"><i class="fas" style="font-family:Arial, Helvetica, sans-serif">IH</i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer><!-- /.footer -->
+   <!-- Scripts -->
+  <script src="https://image4.io/js/site.min.js"></script>
+</body>
+
+</html>

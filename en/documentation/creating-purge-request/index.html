@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Creating Purge Request | image4io</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5P7G6N');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Styles -->
+<link href="https://image4.io/css/site.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=57">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=60">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=72">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=75&">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=114">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=120">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=144">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=152">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=180">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://cdn.image4.io/i4io/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.image4.io/i4io/favicon/favicon.png?w=16">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.image4.io/i4io/favicon/favicon.png?w=32">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.image4.io/i4io/favicon/favicon.png">
+    <link rel="manifest" href="https://image4.io/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://cdn.image4.io/i4io/favicon/ms-icon-310x310.png?w=144&f=auto">
+    <meta name="theme-color" content="#ffffff">  <link rel="icon" href="/en/documentation/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://image4.io/en/documentation/creating-purge-request/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://image4.io/en/documentation/creating-purge-request/amp/" />
+    
+    <meta property="og:site_name" content="image4io Documentation" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Creating Purge Request" />
+    <meta property="og:description" content="In this tutorial, you will learn how to create a purge request from the console. To explain the purge cache: Clear the cached files to force CloudFlare to get a new version of this server from your web server. You can clean your pictures by selecting them. For example, you" />
+    <meta property="og:url" content="https://image4.io/en/documentation/creating-purge-request/" />
+    <meta property="article:published_time" content="2020-04-02T14:57:07.000Z" />
+    <meta property="article:modified_time" content="2020-05-21T10:39:45.000Z" />
+    <meta property="article:tag" content="Tutorial" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Creating Purge Request" />
+    <meta name="twitter:description" content="In this tutorial, you will learn how to create a purge request from the console. To explain the purge cache: Clear the cached files to force CloudFlare to get a new version of this server from your web server. You can clean your pictures by selecting them. For example, you" />
+    <meta name="twitter:url" content="https://image4.io/en/documentation/creating-purge-request/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Buket Kuzey" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Tutorial" />
+    <meta name="twitter:site" content="@tryghost" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "image4io Documentation",
+        "url": "https://image4.io/en/documentation/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Buket Kuzey",
+        "url": "https://image4.io/en/documentation/author/buket/",
+        "sameAs": []
+    },
+    "headline": "Creating Purge Request",
+    "url": "https://image4.io/en/documentation/creating-purge-request/",
+    "datePublished": "2020-04-02T14:57:07.000Z",
+    "dateModified": "2020-05-21T10:39:45.000Z",
+    "keywords": "Tutorial",
+    "description": "In this tutorial, you will learn how to create a purge request from the console.\nTo explain the purge cache:\nClear the cached files to force CloudFlare to get a new version of this server\nfrom your web server. You can clean your pictures by selecting them.\nFor example, you uploaded an image you previously named &#x27;test.jpg&#x27; to the\nconsole and then deleted it. When you want to upload a new, different image and\nif the new image you want to upload is named &#x27;test.jpg&#x27;, the previous image will\nbe shown",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://image4.io/en/documentation/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.39" />
+    <link rel="alternate" type="application/rss+xml" title="image4io Documentation" href="https://image4.io/en/documentation/rss/" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "image4.io",
+        "item": "https://image4.io"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "documentation",
+        "item": "https://image4.io/documentation"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": Creating Purge Request,
+        "item": "https://image4.io/documentation/knowledge-base/Creating Purge Request"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5P7G6N" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+<!-- Topbar -->
+  <section class="topbar d-lg-flex text-white bg-transparent">
+    <div class="container small-3">
+      <nav class="nav">
+        <div class="navbar-left">
+          <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+          <a class="nav-link" href="https://image4.io/en/integrations">Integrations</a>
+          <a class="nav-link" href="https://image4.io/en/migrations">Migrations</a>
+          <a class="nav-link" href="https://image4.io/en/career">Career</a>
+          <a class="nav-link" href="https://image4.io/en/team">Team</a>
+          <a class="nav-link" href="https://image4.io/en/documentation">Support</a>
+          <a class="nav-link" href="https://image4.io/en/how-it-works">How It Works</a>
+          <a class="nav-link" href="https://console.image4.io/Auth/Login">Log in</a>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+  <!-- /.topbar -->
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <div class="container mt-3 mb-3">
+
+        <div id="navbarLogoContainer pb-1 pt-1" class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="https://image4.io">
+            <img class="logo-dark" src="https://cdn.image4.io/i4io/logo-dark-side.png" alt="logo">
+            <img class="logo-light" src="https://cdn.image4.io/i4io/logo-light-side.png" alt="logo">
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <ul class="nav nav-navbar ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://webspeedtest.image4.io/">WEB SPEED TEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://console.image4.io/Auth/SignUp">SIGN UP</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav><!-- /.navbar -->
+
+
+    <!-- Header -->
+
+    <!-- Header -->
+    <header class="header text-center text-white"
+      style="background-image: url(https://cdn.image4.io/i4io/f_auto/documentation-images/kb.png)">
+      <div class="overlay opacity-90" style="background-color: #0079bf"></div>
+      <div class="container mt-1">
+        <h3>Creating Purge Request</h3>
+      </div>
+    </header><!-- /.header -->
+
+  
+<!-- Main Content -->
+<main class="main-content">
+
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Breadcrumbs
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <nav class="bb-1" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb px-0">
+        <li class="breadcrumb-item"><a href="/en/documentation">Documentation</a></li>
+        <li class="breadcrumb-item"><a href="/en/documentation/knowledge-base">Knowledge Base</a></li>
+        <li class="breadcrumb-item">Creating Purge Request</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="row">
+
+      <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Article
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+      <div class="col-md-7 col-xl-8 mr-md-auto py-8">
+        <article>
+          <h2>Creating Purge Request</h2>
+          <p><strong>In this tutorial, you will learn how to create a purge request from the console. To explain the purge cache:<br>Clear the cached files to force CloudFlare to get a new version of this server from your web server. You can clean your pictures by selecting them.<br>For example, you uploaded an image you previously named 'test.jpg' to the console and then deleted it. When you want to upload a new, different image and if the new image you want to upload is named 'test.jpg', the previous image will be shown to you because the image you have previously uploaded to the console is cached. You should create a purge request to prevent this situation.</strong></p><!--kg-card-begin: html--><img class="mt-4 mb-4 b-2 shadow-4" src = "https://cdn.image4.io/i4io/f_auto/documentation-images/storage-dropdown-2.png" alt = "image4io-documentation-purgerequest"><!--kg-card-end: html--><p><strong>For creating a purge request: first, click on the Storage tab which is in the middle of the navigation bar and then click on the storage manager</strong>.</p><!--kg-card-begin: html--><img class="mt-4 mb-4 b-2 shadow-4" src = "https://cdn.image4.io/i4io/f_auto/documentation-images/image4i-console-create-purge-request.png" alt = "image4io-documentation-purgerequest"><!--kg-card-end: html--><p><strong>Scroll down to see your images. Look at the name of the image or folder that you want to purge from CDN cache, then click 'Create Purge Request' which is under the Functions tab.</strong></p><!--kg-card-begin: html--><img class="mt-4 mb-4 b-2 shadow-4" src = "https://cdn.image4.io/i4io/f_auto/documentation-images/image4i-console-purge-folder.png" alt = "image4io-documentation-purgerequest"><!--kg-card-end: html--><p><strong>Enter the path/to/image or path/to/folder/ here and click 'Create Request'.</strong></p><!--kg-card-begin: html--><img class="mt-4 mb-4 b-2 shadow-4" src = "https://cdn.image4.io/i4io/f_auto/documentation-images/storage-dropdown-3.png" alt = "image4io-documentation-purgerequest"><!--kg-card-end: html--><p><strong>To check the state of your purge request, go to the top of the page and click 'Storage' again from the navigation bar. Then click on the 'Purge' button.</strong></p><!--kg-card-begin: html--><img class="mt-4 mb-4 b-2 shadow-4" src = "https://cdn.image4.io/i4io/f_auto/documentation-images/image4io-console-purge-requests.png" alt = "image4io-documentation-purgerequest"><!--kg-card-end: html--><p><strong>Here, you can see the status of your purge request. </strong></p>
+
+        </article>
+      </div>
+
+
+
+      <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Sidebar
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+
+
+
+      <div class="col-md-4 col-xl-3 d-none d-md-block">
+        <aside class="sidebar">
+          <h6>Related Articles</h6>
+
+          <ul class="nav flex-column">
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/embedding-video/>Embedding video to the site</a>
+
+            </li>
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/migrating-your-files-from-aws-s3/>Migrating Your Images From AWS S3</a>
+
+            </li>
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/creating-purge-request/>Creating Purge Request</a>
+
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+</main><!-- /.main-content -->
+
+
+
+
+
+  <!-- Footer -->
+  <!-- Footer -->
+<footer class="footer bg-gray pl-9 pr-9 ">
+  <div class="container">
+      <div class="row gap-y align-items-center">
+
+
+
+          <div class="col-md-6 col-xl-4">
+              <p><a href="https://image4.io/en"><img class="lazyload" src="https://cdn.image4.io/i4io/logo-dark.png?w=300" alt="logo"></a></p>
+              <p>image4io speeds up the images' load time: optimization, delivery, storage; all-in-one platform</p>
+          </div>
+
+          <div class="col-6 col-md-3 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Information</strong></h6>
+              <div class="nav flex-column">
+
+
+                      <a class="nav-link" href="https://image4.io/en/blog/what-is-multi-cdn/">Multi CDN</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/webp-new-format-for-web-images/">WebP</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/how-to-speed-up-your-website/">Web Performance</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/cdn-effect-on-server-performance/">CDN Effect</a>
+
+              </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Product</strong></h6>
+              <div class="nav flex-column">
+                  <a class="nav-link" href="https://image4.io/en/pricing">Pricing</a>
+                  <a class="nav-link" href="https://image4.io/en/team">Team</a>
+                  <a class="nav-link" href="https://image4.io/en/career">Career</a>
+                  <br />
+              </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Support</strong></h6>
+              <div class="nav flex-column">
+                  <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+                  <a class="nav-link" href="https://image4.io/en/contact">Contact</a>
+                  <a class="nav-link" href="https://image4.io/en/privacy-policy">Privacy Policy</a>
+                  <a class="nav-link" href="https://image4.io/en/distant-sales-contract">Distant Sales Contract</a>
+              </div>
+          </div>
+
+
+          <div class="col-12">
+              <hr class="my-0">
+          </div>
+
+          <div class="col-md-3 text-center text-md-left">
+              <small>&copy; 2019 Image4io. All rights reserved.</small>
+          </div>
+
+          <div class="col-md-6 text-center">
+              <div class="social social-sm social-hover-bg-brand">
+                  <a class="social-facebook" target="_blank" href="https://www.facebook.com/image4io"><i class="fa fa-facebook"></i></a>
+                  <a class="social-twitter" target="_blank" href="https://twitter.com/image4io"><i class="fa fa-twitter"></i></a>
+                  <a class="social-linkedin" target="_blank" href="https://www.linkedin.com/company/image4io"><i class="fa fa-linkedin"></i></a>
+                  <a class="social-git" target="_blank" href="https://github.com/Image4io"><i class="fa fa-github"></i></a>
+                  <a class="social-instagram" target="_blank" href="https://www.instagram.com/image4io/"><i class="fa fa-instagram"></i></a>
+                  <a class="social-youtube" target="_blank" href="https://www.youtube.com/channel/UCsqdCRb7WoAKIyr5TRK36dQ"><i class="fa fa-youtube"></i></a>
+                  <a class="social-soundcloud" target="_blank" href="https://www.producthunt.com/upcoming/image4io-full-stack-image-management"><i class="fa fa-product-hunt"></i></a>
+                  <a class="social-medium" target="_blank" href="https://medium.com/image4io"><i class="fa fa-medium"></i></a>
+                  <a class="social-git" target="_blank" href="https://www.indiehackers.com/product/image4io"><i class="fas" style="font-family:Arial, Helvetica, sans-serif">IH</i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer><!-- /.footer -->
+   <!-- Scripts -->
+  <script src="https://image4.io/js/site.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Image Transformation Options | image4io</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5P7G6N');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Styles -->
+<link href="https://image4.io/css/site.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=57">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=60">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=72">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=75&">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=114">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=120">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=144">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=152">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.image4.io/i4io/favicon/apple-icon.png?w=180">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://cdn.image4.io/i4io/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.image4.io/i4io/favicon/favicon.png?w=16">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.image4.io/i4io/favicon/favicon.png?w=32">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://cdn.image4.io/i4io/favicon/favicon.png">
+    <link rel="manifest" href="https://image4.io/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://cdn.image4.io/i4io/favicon/ms-icon-310x310.png?w=144&f=auto">
+    <meta name="theme-color" content="#ffffff">  <link rel="icon" href="/en/documentation/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://image4.io/en/documentation/image-transformation-options/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://image4.io/en/documentation/image-transformation-options/amp/" />
+    
+    <meta property="og:site_name" content="image4io Documentation" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Image Transformation Options" />
+    <meta property="og:description" content="ScaleChanges image height and width to given height and width values by scaling image. Keeping aspect ratio is not required. No image part is lost. All edges and corners of the original image are still visible on the new image. Takes either or both w and h. If only one" />
+    <meta property="og:url" content="https://image4.io/en/documentation/image-transformation-options/" />
+    <meta property="article:published_time" content="2020-03-19T08:17:47.000Z" />
+    <meta property="article:modified_time" content="2020-04-09T08:38:36.000Z" />
+    <meta property="article:tag" content="Image Transformations" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Image Transformation Options" />
+    <meta name="twitter:description" content="ScaleChanges image height and width to given height and width values by scaling image. Keeping aspect ratio is not required. No image part is lost. All edges and corners of the original image are still visible on the new image. Takes either or both w and h. If only one" />
+    <meta name="twitter:url" content="https://image4.io/en/documentation/image-transformation-options/" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="image4io" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Image Transformations" />
+    <meta name="twitter:site" content="@tryghost" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "image4io Documentation",
+        "url": "https://image4.io/en/documentation/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://static.ghost.org/v1.0.0/images/ghost-logo.svg"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "image4io",
+        "url": "https://image4.io/en/documentation/author/image4io/",
+        "sameAs": []
+    },
+    "headline": "Image Transformation Options",
+    "url": "https://image4.io/en/documentation/image-transformation-options/",
+    "datePublished": "2020-03-19T08:17:47.000Z",
+    "dateModified": "2020-04-09T08:38:36.000Z",
+    "keywords": "Image Transformations",
+    "description": "Scale\nChanges image height and width to given height and width values by scaling\nimage. Keeping aspect ratio is not required. No image part is lost. All edges\nand corners of the original image are still visible on the new image. Takes\neither or both w and h. If only one parameter is specified, the resized image\nwill adjust the other to keep the width-to-height ratio of the original image.\n\nFit\nWhen current mode is set to fit with c_fit, URL scales down the image to fit it\ninto a frame. Takes eit",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://image4.io/en/documentation/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.39" />
+    <link rel="alternate" type="application/rss+xml" title="image4io Documentation" href="https://image4.io/en/documentation/rss/" />
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "image4.io",
+        "item": "https://image4.io"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "documentation",
+        "item": "https://image4.io/documentation"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": Image Transformation Options,
+        "item": "https://image4.io/documentation/knowledge-base/Image Transformation Options"
+      }]
+    }
+    </script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5P7G6N" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+
+<!-- Topbar -->
+  <section class="topbar d-lg-flex text-white bg-transparent">
+    <div class="container small-3">
+      <nav class="nav">
+        <div class="navbar-left">
+          <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+          <a class="nav-link" href="https://image4.io/en/integrations">Integrations</a>
+          <a class="nav-link" href="https://image4.io/en/migrations">Migrations</a>
+          <a class="nav-link" href="https://image4.io/en/career">Career</a>
+          <a class="nav-link" href="https://image4.io/en/team">Team</a>
+          <a class="nav-link" href="https://image4.io/en/documentation">Support</a>
+          <a class="nav-link" href="https://image4.io/en/how-it-works">How It Works</a>
+          <a class="nav-link" href="https://console.image4.io/Auth/Login">Log in</a>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+  <!-- /.topbar -->
+
+  <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+      <div class="container mt-3 mb-3">
+
+        <div id="navbarLogoContainer pb-1 pt-1" class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="https://image4.io">
+            <img class="logo-dark" src="https://cdn.image4.io/i4io/logo-dark-side.png" alt="logo">
+            <img class="logo-light" src="https://cdn.image4.io/i4io/logo-light-side.png" alt="logo">
+          </a>
+        </div>
+
+        <section class="navbar-mobile">
+          <ul class="nav nav-navbar ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="https://webspeedtest.image4.io/">WEB SPEED TEST</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/contact">CONTACT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://console.image4.io/Auth/SignUp">SIGN UP</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav><!-- /.navbar -->
+
+
+    <!-- Header -->
+
+    <!-- Header -->
+    <header class="header text-center text-white"
+      style="background-image: url(https://cdn.image4.io/i4io/f_auto/documentation-images/kb.png)">
+      <div class="overlay opacity-90" style="background-color: #0079bf"></div>
+      <div class="container mt-1">
+        <h3>Image Transformation Options</h3>
+      </div>
+    </header><!-- /.header -->
+
+  
+<!-- Main Content -->
+<main class="main-content">
+
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Breadcrumbs
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <nav class="bb-1" aria-label="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb px-0">
+        <li class="breadcrumb-item"><a href="/en/documentation">Documentation</a></li>
+        <li class="breadcrumb-item"><a href="/en/documentation/knowledge-base">Knowledge Base</a></li>
+        <li class="breadcrumb-item">Image Transformation Options</li>
+      </ol>
+    </div>
+  </nav>
+
+
+  <div class="container">
+    <div class="row">
+
+      <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Article
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+      <div class="col-md-7 col-xl-8 mr-md-auto py-8">
+        <article>
+          <h2>Image Transformation Options</h2>
+          <h5 id="scale"><strong>Scale</strong></h5><p>Changes image height and width to given <code>height</code> and <code>width</code> values by scaling image. Keeping aspect ratio is not required. No image part is lost. All edges and corners of the original image are still visible on the new image. Takes either or both w and h. If only one parameter is specified, the resized image will adjust the other to keep the width-to-height ratio of the original image.</p><h5 id="fit"><strong>Fit</strong></h5><p>When current mode is set to fit with <code>c_fit</code>, URL scales down the image to fit it into a frame. Takes either or both <code>w</code> and <code>h</code> of the frame that image will fit into. If one is given, the other one will be calculated to keep the width-to-height ratio of the original image.</p><h5 id="crop"><strong>Crop</strong></h5><p>Removes unwanted outer areas by cutting the edges of the image. Can take x, y, w, h and g. W and h are for defining the cropped image's width and height. If only one parameter is specified, another will be calculated to keep the width-to-height ratio of the original image. X and y are for specifying the beginning coordinates (top left corner) of the cropped image. If only one of x and y is given the other is accepted as <code>0</code>. The gravity parameter can be used instead of x and y to specify the position of the cropped image. Gravity parameters can take values like g_top or g_bot_left. If none of the x, y or g parameters are defined, the cropped image will take position at the center of the original image.</p>
+
+        </article>
+      </div>
+
+
+
+      <!--
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          | Sidebar
+          |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+          !-->
+
+
+
+      <div class="col-md-4 col-xl-3 d-none d-md-block">
+        <aside class="sidebar">
+          <h6>Related Articles</h6>
+
+          <ul class="nav flex-column">
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/seo-option/>SEO Option</a>
+
+            </li>
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/effects/>Effects</a>
+
+            </li>
+
+            <li class="nav-item text-truncate">
+              <i class="fa fa-file-text-o mr-2"></i>
+              <a class="nav-link d-inline-block" href=/en/documentation/image-transformation-options/>Image Transformation Options</a>
+
+            </li>
+          </ul>
+        </aside>
+      </div>
+
+
+
+
+    </div>
+  </div>
+
+
+</main><!-- /.main-content -->
+
+
+
+
+
+  <!-- Footer -->
+  <!-- Footer -->
+<footer class="footer bg-gray pl-9 pr-9 ">
+  <div class="container">
+      <div class="row gap-y align-items-center">
+
+
+
+          <div class="col-md-6 col-xl-4">
+              <p><a href="https://image4.io/en"><img class="lazyload" src="https://cdn.image4.io/i4io/logo-dark.png?w=300" alt="logo"></a></p>
+              <p>image4io speeds up the images' load time: optimization, delivery, storage; all-in-one platform</p>
+          </div>
+
+          <div class="col-6 col-md-3 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Information</strong></h6>
+              <div class="nav flex-column">
+
+
+                      <a class="nav-link" href="https://image4.io/en/blog/what-is-multi-cdn/">Multi CDN</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/webp-new-format-for-web-images/">WebP</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/how-to-speed-up-your-website/">Web Performance</a>
+
+                      <a class="nav-link" href="https://image4.io/en/blog/cdn-effect-on-server-performance/">CDN Effect</a>
+
+              </div>
+          </div>
+
+          <div class="col-6 col-md-3 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Product</strong></h6>
+              <div class="nav flex-column">
+                  <a class="nav-link" href="https://image4.io/en/pricing">Pricing</a>
+                  <a class="nav-link" href="https://image4.io/en/team">Team</a>
+                  <a class="nav-link" href="https://image4.io/en/career">Career</a>
+                  <br />
+              </div>
+          </div>
+
+          <div class="col-6 col-md-6 col-xl-2">
+              <h6 class="mb-4 mt-1"><strong>Support</strong></h6>
+              <div class="nav flex-column">
+                  <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+                  <a class="nav-link" href="https://image4.io/en/contact">Contact</a>
+                  <a class="nav-link" href="https://image4.io/en/privacy-policy">Privacy Policy</a>
+                  <a class="nav-link" href="https://image4.io/en/distant-sales-contract">Distant Sales Contract</a>
+              </div>
+          </div>
+
+
+          <div class="col-12">
+              <hr class="my-0">
+          </div>
+
+          <div class="col-md-3 text-center text-md-left">
+              <small>&copy; 2019 Image4io. All rights reserved.</small>
+          </div>
+
+          <div class="col-md-6 text-center">
+              <div class="social social-sm social-hover-bg-brand">
+                  <a class="social-facebook" target="_blank" href="https://www.facebook.com/image4io"><i class="fa fa-facebook"></i></a>
+                  <a class="social-twitter" target="_blank" href="https://twitter.com/image4io"><i class="fa fa-twitter"></i></a>
+                  <a class="social-linkedin" target="_blank" href="https://www.linkedin.com/company/image4io"><i class="fa fa-linkedin"></i></a>
+                  <a class="social-git" target="_blank" href="https://github.com/Image4io"><i class="fa fa-github"></i></a>
+                  <a class="social-instagram" target="_blank" href="https://www.instagram.com/image4io/"><i class="fa fa-instagram"></i></a>
+                  <a class="social-youtube" target="_blank" href="https://www.youtube.com/channel/UCsqdCRb7WoAKIyr5TRK36dQ"><i class="fa fa-youtube"></i></a>
+                  <a class="social-soundcloud" target="_blank" href="https://www.producthunt.com/upcoming/image4io-full-stack-image-management"><i class="fa fa-product-hunt"></i></a>
+                  <a class="social-medium" target="_blank" href="https://medium.com/image4io"><i class="fa fa-medium"></i></a>
+                  <a class="social-git" target="_blank" href="https://www.indiehackers.com/product/image4io"><i class="fas" style="font-family:Arial, Helvetica, sans-serif">IH</i></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer><!-- /.footer -->
+   <!-- Scripts -->
+  <script src="https://image4.io/js/site.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Responsive Web Design (Part-1) | image4io</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5P7G6N');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Styles -->
+<link href="https://image4.io/css/site.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="we will look into more technical details about responsive design. Using fluid grids or fluid design, using media query, using responsive images" />
+    <link rel="canonical" href="https://image4.io/en/blog/responsive-web-design-part-1/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://image4.io/en/blog/responsive-web-design-part-1/amp/" />
+    
+    <meta property="og:site_name" content="image4io Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Responsive Web Design (Part-1)" />
+    <meta property="og:description" content="we will look into more technical details about responsive design. Using fluid grids or fluid design, using media query, using responsive images" />
+    <meta property="og:url" content="https://image4.io/en/blog/responsive-web-design-part-1/" />
+    <meta property="og:image" content="https://image4.io/en/blog/content/images/2020/02/responsive-web-design.png" />
+    <meta property="article:published_time" content="2020-02-21T12:47:52.000Z" />
+    <meta property="article:modified_time" content="2020-03-24T15:00:07.000Z" />
+    <meta property="article:tag" content="responsive" />
+    <meta property="article:tag" content="responsive design" />
+    <meta property="article:tag" content="css" />
+    <meta property="article:tag" content="website design" />
+    <meta property="article:tag" content="design" />
+    <meta property="article:tag" content="bootstrap" />
+    <meta property="article:tag" content="responsive div css" />
+    <meta property="article:tag" content="responsiveness" />
+    <meta property="article:tag" content="fluid grid" />
+    <meta property="article:tag" content="fluid design" />
+    <meta property="article:tag" content="responsive image" />
+    <meta property="article:tag" content="flexbox" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/image4io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Responsive Web Design (Part-1)" />
+    <meta name="twitter:description" content="we will look into more technical details about responsive design. Using fluid grids or fluid design, using media query, using responsive images" />
+    <meta name="twitter:url" content="https://image4.io/en/blog/responsive-web-design-part-1/" />
+    <meta name="twitter:image" content="https://image4.io/en/blog/content/images/2020/02/responsive-web-design.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Gökhan Koçyiğit" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="responsive, responsive design, css, website design, design, bootstrap, responsive div css, responsiveness, fluid grid, fluid design, responsive image, flexbox" />
+    <meta name="twitter:site" content="@image4io" />
+    <meta property="og:image:width" content="985" />
+    <meta property="og:image:height" content="640" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "image4io Blog",
+        "url": "https://image4.io/en/blog/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://image4.io/en/blog/favicon.ico",
+            "width": 48,
+            "height": 48
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Gökhan Koçyiğit",
+        "url": "https://image4.io/en/blog/author/gokhan/",
+        "sameAs": []
+    },
+    "headline": "Responsive Web Design (Part-1)",
+    "url": "https://image4.io/en/blog/responsive-web-design-part-1/",
+    "datePublished": "2020-02-21T12:47:52.000Z",
+    "dateModified": "2020-03-24T15:00:07.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://image4.io/en/blog/content/images/2020/02/responsive-web-design.png",
+        "width": 985,
+        "height": 640
+    },
+    "keywords": "responsive, responsive design, css, website design, design, bootstrap, responsive div css, responsiveness, fluid grid, fluid design, responsive image, flexbox",
+    "description": "In the previous post, we have talked about the responsiveness of a webpage and\nthe techniques that how to achieve responsiveness in an overview. In this post,\nwe will look into more technical details about how we can do it.\n\nAs we talked about previously, Responsive Design is an approach that makes\nwebsites show in multiple devices appropriate to its width and height. As Ethan\nMarcotte [https://alistapart.com/article/responsive-web-design/] explained in\nits article in 2010, there are three key a",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://image4.io/en/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.39" />
+    <link rel="alternate" type="application/rss+xml" title="image4io Blog" href="https://image4.io/en/blog/rss/" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5P7G6N" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="/en">
+            <img class="logo-dark" src="https://image4.io/img/logo-dark-side.png" alt="logo">
+            <img class="logo-light" src="https://image4.io/img/logo-light-side.png" alt="logo">
+          </a>
+        </div>
+        <section class="navbar-mobile">
+          <ul class="nav nav-navbar ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/en">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/en/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/career">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">en<span class="arrow"></span></a>
+              <nav class="nav">
+                <a class="nav-link" href="/tr"><img src="https://cdn.image4.io/i4io/flags/tr.png?w=25&f=auto"
+                    width="25" /> Türkçe Anasayfa</a>
+                <a class="nav-link" href="/en"><img src="https://cdn.image4.io/i4io/flags/us.png?w=25&f=auto"
+                    width="25" /> English Homepage</a>
+              </nav>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav><!-- /.navbar -->
+    
+<!-- Main Content -->
+<main class="main-content">
+  <div class="section">
+    <div class="container">
+
+      <div class="text-center mt-8">
+        <h2>Responsive Web Design (Part-1)</h2>
+        <time class="post-full-meta-date" datetime="2020-02-21">21 February 2020</time>,
+        <a href="https://image4.io/en/blog/tag/responsive/">responsive</a></p>
+      </div>
+
+      <div class="text-center my-8">
+        <img class="rounded-md" srcset="/en/blog/content/images/size/w300/2020/02/responsive-web-design.png 300w,
+                            /en/blog/content/images/size/w600/2020/02/responsive-web-design.png 600w,
+                            /en/blog/content/images/size/w1000/2020/02/responsive-web-design.png 1000w,
+                            /en/blog/content/images/size/w2000/2020/02/responsive-web-design.png 2000w" sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 700px,
+                            1400px" data-src="/en/blog/content/images/size/w2000/2020/02/responsive-web-design.png" alt="Responsive Web Design (Part-1)">
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p>In the previous post, we have talked about the responsiveness of a webpage and the techniques that how to achieve responsiveness in an overview. In this post, we will look into more technical details about how we can do it.</p><p>As we talked about previously, Responsive Design is an approach that makes websites show in multiple devices appropriate to its width and height. As <a href="https://alistapart.com/article/responsive-web-design/">Ethan Marcotte</a> explained in its article in 2010, there are three key aspects of a website to be responsive:</p><ul><li>Using <a href="https://alistapart.com/article/fluidgrids/">fluid grids</a> or fluid design</li><li>Using media query</li><li>Using responsive images</li></ul><p>Let's dive right in!</p><h2 id="fluid-grids">Fluid Grids</h2><p></p><!--kg-card-begin: html--><div style="text-align: center;">
+      <img src="https://cdn.image4.io/i4io/f_auto/blog-images/Content-is-like-water.jpg" alt="content-is-like-water">
+</div>
+<!--kg-card-end: html--><p></p><p>It's kind of a strange way of explaining this but if you have content like a "fluid", wherever you put your content, it will take the space and shows it.</p><p>The fluid grid concept is to designing webpage contents/elements proportion to width and height of the container itself- not to container's pixel value. Giving fixed values makes our website more "solid" and not responsive at all.</p><p>How do we achieve this? That's very simple - change all the values with the appropriate percentage. For example, if you have a <code>div</code> tag that wraps all the content, instead of giving any pixel value, you simply give percent values.</p><pre><code>.content-div{
+  max-width:80%;
+  height:auto;
+}</code></pre><p>As you can see above, we can give a div a max-width of 80% of the parent's width and height appropriate to its content.</p><p>You can't always use <code>%</code> unit since some properties - like font-sizes - cannot have it. But we have to scale them anyway. So what we do about them? - <code>em</code> to the rescue! </p><p>The <code>em</code> unit is a relative measure unit that computes according to the font-size of the current element. For example:</p><pre><code>html {
+    font-size: 10px;
+}
+div {
+    background-color: red;
+    width: 40em; // 400px
+}
+p {
+    font-size: 1.2em; //12 px
+}</code></pre><p>As you can see, <code>p</code> tags will have 12px value. <code>em</code> also can be used instead of px values of a given element. <code>em</code> is a very useful tool for responsive design and we should use them.</p><p>In addition to <code>em</code> , there is a unit called <code>rem</code> which is very similar to the <code>em</code> with a slight difference - it is calculated according to the root element - <code>html</code>. If you defined an <code>html</code> font-size, <code>rem</code> will be using that px value.</p><pre><code>html {
+    font-size: 10px;
+}
+div {
+    font-size:5px;
+    background-color: red;
+    width: 40rem; // 400px
+}
+p {
+    font-size: 1.2rem; //12 px
+}</code></pre><p>As you can see above, the width of the <code>div</code> is still 400px even though the <code>div</code>'s font-size is 15px. If we have used <code>em </code>instead of <code>rem</code>, we would have a 200px-width <code>div</code>. </p><h2 id="flexbox">Flexbox</h2><p>Since we have started to talk about fluid design, we have to talk about flexbox. Flexbox is a layout model that allows its content element to align and position themself according to their container. Flexbox is a great way to implement a responsive design. </p><p>Using flexbox is simple: you simply add <code>flex</code> attribute to a given element's <code>display</code> attribute</p><pre><code>.container {
+  display: flex;
+  width:500px;
+}
+
+.content{
+  width:48px;
+  height:48px;
+  margin:auto;
+}</code></pre><p>If you use the <code>content</code> class inside of the <code>container</code>, you will see that <code>content</code> will position itself inside of the container according to its width value (I give px values to make sure the reader would understand the flex concept). </p><p>Flexbox is very useful for many situations, but it's not a silver bullet - you can't use it for all situations. For example, it may cause problems when used for <a href="https://jakearchibald.com/2014/dont-use-flexbox-for-page-layout/">page layout</a>.  </p><p>All in all, it is a great tool to have and use when it's necessary. You can learn more about flexbox from <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">here </a>and also practice from <a href="https://flexboxfroggy.com/">here </a>( I highly suggest this playground)</p><p>In my next post, we will be looking at the media-queries and responsive images and how we utilize them to achieve responsiveness.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Comments
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <div class="section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "https://image4.io/en/blog/responsive-web-design-part-1/";
+              this.page.identifier = "ghost-5e4a43895e2e2a047edd1297"
+            };
+            (function () {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://image4io-en.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+        </div>
+
+      </div>
+    </div>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray">
+    <div class="container">
+        <div class="row gap-y align-items-center">
+            <div class="col-md-3 text-center text-md-left">
+                <a href="/en"><img src="https://cdn.image4.io/i4io/logo-dark.png?f=auto" alt="logo"></a>
+            </div>
+            <div class="col-md-9">
+                <div class="nav nav-bold nav-uppercase justify-content-center justify-content-md-end">
+                    <a class="nav-link" href="/en">Home</a>
+                    <a class="nav-link" href="/en/pricing">PRICING</a>
+                    <a class="nav-link active" href="/en/blog">Blog</a>
+                    <a class="nav-link" href="/en/team">Team</a>
+                    <a class="nav-link" href="/en/career">Career</a>
+                    <a class="nav-link" href="/en/contact">Contact</a>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr class="my-0">
+            </div>
+            
+            <div class="col-md-6 col-xl-4">
+                <p>image4io speeds up the images&#x27;s load time of the web sites and mobile applications with its multi-CDN architecture.</p>
+            </div>
+
+            <div class="col-6 col-md-3 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Information</strong></h6>
+                <div class="nav flex-column">
+                        <a class="nav-link" href="https://image4.io/en/blog/what-is-multi-cdn/">Multi CDN</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/webp-new-format-for-web-images/">WebP</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/how-to-speed-up-your-website/">Web Performansı</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/cdn-effect-on-server-performance/">CDN Etkisi</a>
+
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Product</strong></h6>
+                <div class="nav flex-column">
+                    <a class="nav-link" href="https://image4.io/en/pricing">Pricing</a>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Support</strong></h6>
+                <div class="nav flex-column">
+                    <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+                    <a class="nav-link" href="https://image4.io/en/contact">Contact</a>
+                    <a class="nav-link" href="https://image4.io/en/privacy-policy">Privacy Policy</a>
+                    <a class="nav-link" href="https://image4.io/en/distant-sales-contract">Distant Sales Contract</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-xl-2 text-center">
+                <p><a class="btn btn-block btn-round btn-primary" href="https://console.image4.io">Try it free</a></p>
+            </div>
+            <div class="col-md-3 text-center text-md-left">
+                <small>&copy; 2019 Image4io. All rights reserved.</small>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="social social-sm social-hover-bg-brand">
+                    <a class="social-facebook" target="_blank" href="https://www.facebook.com/image4io"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="social-twitter" target="_blank" href="https://twitter.com/image4io"><i
+                            class="fa fa-twitter"></i></a>
+                    <a class="social-linkedin" target="_blank" href="https://www.linkedin.com/company/image4io"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="social-git" target="_blank" href="https://github.com/Image4io"><i
+                            class="fa fa-github"></i></a>
+                    <a class="social-instagram" target="_blank" href="https://www.instagram.com/image4io/"><i
+                            class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 text-center text-md-left">
+                <a href="/tr" class="text-dark"><img src="https://cdn.image4.io/i4io/flags/tr.png?w=25&f=auto" />&nbsp;
+                    TR Home</a>&nbsp;&nbsp;
+                <a href="/en" class="text-dark"><img src="https://cdn.image4.io/i4io/flags/us.png?w=25&f=auto" />&nbsp;
+                    EN Home</a>
+            </div>
+        </div>
+    </div>
+</footer><!-- /.footer -->
+    <!-- Scripts -->
+    <script src="https://image4.io/js/site.min.js"></script>
+</body>
+
+</html>

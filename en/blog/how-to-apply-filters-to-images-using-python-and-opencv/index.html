@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>How to Apply Filters to Images Using Python and OpenCV | image4io</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5P7G6N');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Styles -->
+<link href="https://image4.io/css/site.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="In this blog article we go through the basics of image filters and how to apply them using OpenCV. Kernel Size, 2D Convolution, Filter2D" />
+    <link rel="canonical" href="https://image4.io/en/blog/how-to-apply-filters-to-images-using-python-and-opencv/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://image4.io/en/blog/how-to-apply-filters-to-images-using-python-and-opencv/amp/" />
+    
+    <meta property="og:site_name" content="image4io Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How to Apply Filters to Images Using Python and OpenCV" />
+    <meta property="og:description" content="In this blog article we go through the basics of image filters and how to apply them using OpenCV. Kernel Size, 2D Convolution, Filter2D" />
+    <meta property="og:url" content="https://image4.io/en/blog/how-to-apply-filters-to-images-using-python-and-opencv/" />
+    <meta property="og:image" content="https://image4.io/en/blog/content/images/2020/03/CameraFilter.jpg" />
+    <meta property="article:published_time" content="2020-03-21T16:34:50.000Z" />
+    <meta property="article:modified_time" content="2021-01-31T15:20:23.000Z" />
+    <meta property="article:tag" content="Image filtering" />
+    <meta property="article:tag" content="opencv" />
+    <meta property="article:tag" content="Image" />
+    <meta property="article:tag" content="images" />
+    <meta property="article:tag" content="Software" />
+    <meta property="article:tag" content="2D Convolution" />
+    <meta property="article:tag" content="Image Kernel" />
+    <meta property="article:tag" content="Kernel Size" />
+    <meta property="article:tag" content="OpenCV filter" />
+    <meta property="article:tag" content="filter2D" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/image4io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How to Apply Filters to Images Using Python and OpenCV" />
+    <meta name="twitter:description" content="In this blog article we go through the basics of image filters and how to apply them using OpenCV. Kernel Size, 2D Convolution, Filter2D" />
+    <meta name="twitter:url" content="https://image4.io/en/blog/how-to-apply-filters-to-images-using-python-and-opencv/" />
+    <meta name="twitter:image" content="https://image4.io/en/blog/content/images/2020/03/CameraFilter.jpg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Atakan Atamert" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Image filtering, opencv, Image, images, Software, 2D Convolution, Image Kernel, Kernel Size, OpenCV filter, filter2D" />
+    <meta name="twitter:site" content="@image4io" />
+    <meta property="og:image:width" content="975" />
+    <meta property="og:image:height" content="650" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "image4io Blog",
+        "url": "https://image4.io/en/blog/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://image4.io/en/blog/favicon.ico"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Atakan Atamert",
+        "url": "https://image4.io/en/blog/author/atakan/",
+        "sameAs": []
+    },
+    "headline": "How to Apply Filters to Images Using Python and OpenCV",
+    "url": "https://image4.io/en/blog/how-to-apply-filters-to-images-using-python-and-opencv/",
+    "datePublished": "2020-03-21T16:34:50.000Z",
+    "dateModified": "2021-01-31T15:20:23.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://image4.io/en/blog/content/images/2020/03/CameraFilter.jpg",
+        "width": 975,
+        "height": 650
+    },
+    "keywords": "Image filtering, opencv, Image, images, Software, 2D Convolution, Image Kernel, Kernel Size, OpenCV filter, filter2D",
+    "description": "In this post we will be making an introduction to various types of filters and\nimplementing them in Python [https://www.python.org]using OpenCV\n[https://opencv.org]which is a computer vision library.\n\nTo begin with, we first need to understand that images are basically matrices\nfilled with numbers spanning between 0-255 which is an 8-bit range. Those values\nare corresponding to the brightness level of each pixel and they are dependent\non the bit range they are on. Those bit ranges are spanning b",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://image4.io/en/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.39" />
+    <link rel="alternate" type="application/rss+xml" title="image4io Blog" href="https://image4.io/en/blog/rss/" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5P7G6N" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="/en">
+            <img class="logo-dark" src="https://image4.io/img/logo-dark-side.png" alt="logo">
+            <img class="logo-light" src="https://image4.io/img/logo-light-side.png" alt="logo">
+          </a>
+        </div>
+        <section class="navbar-mobile">
+          <ul class="nav nav-navbar ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/en">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/en/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/career">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">en<span class="arrow"></span></a>
+              <nav class="nav">
+                <a class="nav-link" href="/tr"><img src="https://cdn.image4.io/i4io/flags/tr.png?w=25&f=auto"
+                    width="25" /> Türkçe Anasayfa</a>
+                <a class="nav-link" href="/en"><img src="https://cdn.image4.io/i4io/flags/us.png?w=25&f=auto"
+                    width="25" /> English Homepage</a>
+              </nav>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav><!-- /.navbar -->
+    
+<!-- Main Content -->
+<main class="main-content">
+  <div class="section">
+    <div class="container">
+
+      <div class="text-center mt-8">
+        <h2>How to Apply Filters to Images Using Python and OpenCV</h2>
+        <time class="post-full-meta-date" datetime="2020-03-21">21 March 2020</time>,
+        <a href="https://image4.io/en/blog/tag/image-filtering/">Image filtering</a></p>
+      </div>
+
+      <div class="text-center my-8">
+        <img class="rounded-md" srcset="/en/blog/content/images/size/w300/2020/03/CameraFilter.jpg 300w,
+                            /en/blog/content/images/size/w600/2020/03/CameraFilter.jpg 600w,
+                            /en/blog/content/images/size/w1000/2020/03/CameraFilter.jpg 1000w,
+                            /en/blog/content/images/size/w2000/2020/03/CameraFilter.jpg 2000w" sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 700px,
+                            1400px" data-src="/en/blog/content/images/size/w2000/2020/03/CameraFilter.jpg" alt="How to Apply Filters to Images Using Python and OpenCV">
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p>In this post we will be making an introduction to various types of filters and implementing them in <a href="https://www.python.org">Python </a>using <a href="https://opencv.org">OpenCV </a>which is a computer vision library.</p><p>To begin with, we first need to understand that images are basically matrices filled with numbers spanning between 0-255 which is an 8-bit range. Those values are corresponding to the brightness level of each pixel and they are dependent on the bit range they are on. Those bit ranges are spanning between 8-bit to 30-bit. The 24-bit range is commonly referred as "true-color". The reasoning behind that is, it involves 3, 8-bit ranges for each channel in RGB.</p><p>As now we have covered how images are structured, we can move towards to the concept of <strong>“Kernel”</strong>. This is the fundamental structure behind image filtering. Kernels are minified pixel blocks with a purpose of going over the whole image and applying mathematical operations on top the corresponding pixels they are currently on. This operation is called <strong>“2D Convolution”</strong>. It works in a following manner,</p><p>	1.	Start off by picking a kernel size, it is generally picked 3x3 pixels. The kernel size changes the feature localization property. If it is large, then the features will more likely to be global instead of local. In addition to that, larger kernels are less computationally efficient due to increased amount of individual calculations. Also, larger kernels tend to reduce the noise better, although it may cause artifacts in the image. So finding the <strong>correct and balanced kernel size</strong> is quite important when applying filter to the image.</p><p>	2.	Moving further, fill out the kernel with filter specific values. For example,</p><p></p><!--kg-card-begin: html--><div style="text-align: center;">
+    <img src="https://cdn.image4.io/i4io/f_auto/blog-images/KernelSamples-1.png" alt="gaussian-blur">
+</div><!--kg-card-end: html--><p></p><p>Those values are the determining factor of the filter behavior. They can be set up for many purposes such as blur, sharpen-unsharpen, edge detection and so on.</p><p>	3.	After the values of filter are decided, place it in on the top left pixel of the image. The center of the kernel should correspond to that pixel. Then each pixel in the kernel is multiplied with its corresponding image counterpart and the result is summed up. To preserve the original brightness, it should be normalized. Therefore, divide the summation to the number of elements in the kernel.</p><p>	4.	Finally, apply previous step to the image from top left pixel to bottom right pixel in a row-by-row manner. In this step it is important to not overwrite the image because previous operations will probably interfere with the next operations.</p><p>As you can see from the processes above, although it algorithmically looks simple, implementing it manually is rather time consuming. Therefore, it is better to use OpenCV for implementation, which can be seen below.</p><!--kg-card-begin: markdown--><pre><code class="language-python">import cv2
+import numpy as np
+
+img = cv2.imread(&quot;HeliView.jpg&quot;)
+img = cv2.resize(img, (0, 0), None, .25, .25)
+
+gaussianBlurKernel = np.array(([[1, 2, 1], [2, 4, 2], [1, 2, 1]]), np.float32)/9
+sharpenKernel = np.array(([[0, -1, 0], [-1, 9, -1], [0, -1, 0]]), np.float32)/9
+meanBlurKernel = np.ones((3, 3), np.float32)/9
+
+gaussianBlur = cv2.filter2D(src=img, kernel=gaussianBlurKernel, ddepth=-1)
+meanBlur = cv2.filter2D(src=img, kernel=meanBlurKernel, ddepth=-1)
+sharpen = cv2.filter2D(src=img, kernel=sharpenKernel, ddepth=-1)
+
+horizontalStack = np.concatenate((img, gaussianBlur, meanBlur, sharpen), axis=1)
+
+cv2.imwrite(&quot;Output.jpg&quot;, horizontalStack)
+
+cv2.imshow(&quot;2D Convolution Example&quot;, horizontalStack)
+
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+</code></pre>
+<!--kg-card-end: markdown--><p>In the code, we initially import the required libraries, which are OpenCV and <a href="https://numpy.org">Numpy</a>. After that, we read the image in the project directory, then resize it to quarter of its size in order to compare it with its multiple instances. In this case we use <strong><a href="https://image4.io/en/blog/how-jpeg-works-in-4-simple-steps/">.jpg</a> </strong>as our image format. More information about image formats could be found <a href="https://image4.io/en/blog/what-is-best-image-format-for-web-which-one-to-choose/">here</a>. Then, we define our aforementioned kernels. In our case, we use 3 kernels but number of examples could be increased. Also notice that we divide every kernel to 9, in order to preserve the original brightness. Moving further, we apply our filters to image and creating multiple variations for each filter. We do that by using the <strong>filter2D </strong>method inside the OpenCV library. After we have obtained our images, we combine them horizontally using Numpy included concetenate function. And last but not least we save our image in our working directory. And the result is following,</p><p></p><!--kg-card-begin: html--><div style="text-align: center;">
+    <img src="https://cdn.image4.io/i4io/f_auto/blog-images/Output.jpg" alt="opencv-filters">
+</div><!--kg-card-end: html--><p></p><p>The images correspond to,</p><p>	1. Original</p><p>	2. GaussianBlur</p><p>	3. MeanBlur</p><p>	4. Sharpen</p><p>From this outcome, the effects of kernel changes could be observed. As you can see the mean blur does not focus on features, it rather creates an globally even blur. On the other hand, Gaussian blur does weight greater local blurs, which can be observed by comparing the cockpit and the sky. Be sure to run code locally and observe the changes on your own, in order to have better understanding of the subject. It is highly recommended to try various kernels, especially the ones with the horizontal and vertical edge detection.</p><p>To conclude, the concept behind the filters are really interesting but one important thing to mention here is the practical usage. When the word "Image Filter" mentioned, a lot of people thing about filters that we see in photography, mobile apps or photo editing software. Those filters are actually the combination of the multiple basic filters that we mentioned during this post and many more in order to create the desired effect. </p><p>Although, those filters and programs are useful in many cases <strong>they were still unable to provide one important feature, which is practicality.</strong> It is not easy to apply effect to images without installing a dedicated program or coding your own just like we did. Which is obviously not a feasible option for many people. As from this idea, we incorporated most commonly used image processing functionalities inside <a href="https://image4.io/en">image4io</a> such as blur and sharpen. Users can modify and share images everywhere without any compromises by using a <a href="https://image4.io/en/how-it-works">simplistic URL</a>. </p><p><strong>Resources</strong></p><p>Visual Explanation of Image Kernels by Victor Powell: <a href="https://setosa.io/ev/image-kernels/">https://setosa.io/ev/image-kernels/</a></p><p>OpenCV Documentation: <a href="https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/filter_2d/filter_2d.html">https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/filter_2d/filter_2d.html</a></p><p>Kernel Wiki: <a href="https://en.wikipedia.org/wiki/Kernel_(image_processing)">https://en.wikipedia.org/wiki/Kernel_(image_processing)</a></p><p>Gaussian Blur Wiki: <a href="https://en.wikipedia.org/wiki/Gaussian_blur">https://en.wikipedia.org/wiki/Gaussian_blur</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Comments
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <div class="section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "https://image4.io/en/blog/how-to-apply-filters-to-images-using-python-and-opencv/";
+              this.page.identifier = "ghost-5e761a3de34828047df372ab"
+            };
+            (function () {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://image4io-en.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+        </div>
+
+      </div>
+    </div>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray">
+    <div class="container">
+        <div class="row gap-y align-items-center">
+            <div class="col-md-3 text-center text-md-left">
+                <a href="/en"><img src="https://cdn.image4.io/i4io/logo-dark.png?f=auto" alt="logo"></a>
+            </div>
+            <div class="col-md-9">
+                <div class="nav nav-bold nav-uppercase justify-content-center justify-content-md-end">
+                    <a class="nav-link" href="/en">Home</a>
+                    <a class="nav-link" href="/en/pricing">PRICING</a>
+                    <a class="nav-link active" href="/en/blog">Blog</a>
+                    <a class="nav-link" href="/en/team">Team</a>
+                    <a class="nav-link" href="/en/career">Career</a>
+                    <a class="nav-link" href="/en/contact">Contact</a>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr class="my-0">
+            </div>
+            
+            <div class="col-md-6 col-xl-4">
+                <p>image4io speeds up the images&#x27;s load time of the web sites and mobile applications with its multi-CDN architecture.</p>
+            </div>
+
+            <div class="col-6 col-md-3 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Information</strong></h6>
+                <div class="nav flex-column">
+                        <a class="nav-link" href="https://image4.io/en/blog/what-is-multi-cdn/">Multi CDN</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/webp-new-format-for-web-images/">WebP</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/how-to-speed-up-your-website/">Web Performansı</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/cdn-effect-on-server-performance/">CDN Etkisi</a>
+
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Product</strong></h6>
+                <div class="nav flex-column">
+                    <a class="nav-link" href="https://image4.io/en/pricing">Pricing</a>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Support</strong></h6>
+                <div class="nav flex-column">
+                    <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+                    <a class="nav-link" href="https://image4.io/en/contact">Contact</a>
+                    <a class="nav-link" href="https://image4.io/en/privacy-policy">Privacy Policy</a>
+                    <a class="nav-link" href="https://image4.io/en/distant-sales-contract">Distant Sales Contract</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-xl-2 text-center">
+                <p><a class="btn btn-block btn-round btn-primary" href="https://console.image4.io">Try it free</a></p>
+            </div>
+            <div class="col-md-3 text-center text-md-left">
+                <small>&copy; 2019 Image4io. All rights reserved.</small>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="social social-sm social-hover-bg-brand">
+                    <a class="social-facebook" target="_blank" href="https://www.facebook.com/image4io"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="social-twitter" target="_blank" href="https://twitter.com/image4io"><i
+                            class="fa fa-twitter"></i></a>
+                    <a class="social-linkedin" target="_blank" href="https://www.linkedin.com/company/image4io"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="social-git" target="_blank" href="https://github.com/Image4io"><i
+                            class="fa fa-github"></i></a>
+                    <a class="social-instagram" target="_blank" href="https://www.instagram.com/image4io/"><i
+                            class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 text-center text-md-left">
+                <a href="/tr" class="text-dark"><img src="https://cdn.image4.io/i4io/flags/tr.png?w=25&f=auto" />&nbsp;
+                    TR Home</a>&nbsp;&nbsp;
+                <a href="/en" class="text-dark"><img src="https://cdn.image4.io/i4io/flags/us.png?w=25&f=auto" />&nbsp;
+                    EN Home</a>
+            </div>
+        </div>
+    </div>
+</footer><!-- /.footer -->
+    <!-- Scripts -->
+    <script src="https://image4.io/js/site.min.js"></script>
+</body>
+
+</html>

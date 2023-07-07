@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>How JPEG Works in 4 “Simple” Steps | image4io</title>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M5P7G6N');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Styles -->
+<link href="https://image4.io/css/site.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Introductory explanation of how JPEG compression works." />
+    <link rel="canonical" href="https://image4.io/en/blog/how-jpeg-works-in-4-simple-steps/" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+    <link rel="amphtml" href="https://image4.io/en/blog/how-jpeg-works-in-4-simple-steps/amp/" />
+    
+    <meta property="og:site_name" content="image4io Blog" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="How JPEG Works in 4 “Simple” Steps" />
+    <meta property="og:description" content="Introductory explanation of how JPEG compression works." />
+    <meta property="og:url" content="https://image4.io/en/blog/how-jpeg-works-in-4-simple-steps/" />
+    <meta property="og:image" content="https://image4.io/en/blog/content/images/2020/03/JpegIcon.png" />
+    <meta property="article:published_time" content="2020-03-14T15:47:01.000Z" />
+    <meta property="article:modified_time" content="2021-01-31T15:17:25.000Z" />
+    <meta property="article:tag" content="JPEG" />
+    <meta property="article:tag" content="compress" />
+    <meta property="article:tag" content="Image" />
+    <meta property="article:tag" content="Image Format" />
+    <meta property="article:tag" content="imageoptimization" />
+    <meta property="article:tag" content="Image Optimization" />
+    <meta property="article:tag" content="images" />
+    <meta property="article:tag" content="JPG" />
+    <meta property="article:tag" content="jpeg xr" />
+    <meta property="article:tag" content="load time" />
+    <meta property="article:tag" content="Loading time" />
+    <meta property="article:tag" content="jpeg work" />
+    <meta property="article:tag" content="Colorspace Transform" />
+    <meta property="article:tag" content="Discrete Cosine Transform" />
+    <meta property="article:tag" content="Quantization" />
+    <meta property="article:tag" content="Encoding Jpeg" />
+    
+    <meta property="article:publisher" content="https://www.facebook.com/image4io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="How JPEG Works in 4 “Simple” Steps" />
+    <meta name="twitter:description" content="Introductory explanation of how JPEG compression works." />
+    <meta name="twitter:url" content="https://image4.io/en/blog/how-jpeg-works-in-4-simple-steps/" />
+    <meta name="twitter:image" content="https://image4.io/en/blog/content/images/2020/03/JpegIcon.png" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Atakan Atamert" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="JPEG, compress, Image, Image Format, imageoptimization, Image Optimization, images, JPG, jpeg xr, load time, Loading time, jpeg work, Colorspace Transform, Discrete Cosine Transform, Quantization, Encoding Jpeg" />
+    <meta name="twitter:site" content="@image4io" />
+    <meta property="og:image:width" content="975" />
+    <meta property="og:image:height" content="650" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "image4io Blog",
+        "url": "https://image4.io/en/blog/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://image4.io/en/blog/favicon.ico"
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Atakan Atamert",
+        "url": "https://image4.io/en/blog/author/atakan/",
+        "sameAs": []
+    },
+    "headline": "How JPEG Works in 4 “Simple” Steps",
+    "url": "https://image4.io/en/blog/how-jpeg-works-in-4-simple-steps/",
+    "datePublished": "2020-03-14T15:47:01.000Z",
+    "dateModified": "2021-01-31T15:17:25.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://image4.io/en/blog/content/images/2020/03/JpegIcon.png",
+        "width": 975,
+        "height": 650
+    },
+    "keywords": "JPEG, compress, Image, Image Format, imageoptimization, Image Optimization, images, JPG, jpeg xr, load time, Loading time, jpeg work, Colorspace Transform, Discrete Cosine Transform, Quantization, Encoding Jpeg",
+    "description": "It is a known fact that JPEG is one of the most widely used image format today.\nMany of us possibly used it multiple times without really knowing how it works,\nwhen to use it and how it manages to reduce image size significantly. During\nthis blog post we observe that the core principles are not too complex, at least\non higher level.\n\nTo begin with, JPEG Compression consists of 4 steps which are the following,\n\n1.       Colorspace Transform\n\n2.       Discrete Cosine Transform\n\n3.       Quantizati",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://image4.io/en/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 3.39" />
+    <link rel="alternate" type="application/rss+xml" title="image4io Blog" href="https://image4.io/en/blog/rss/" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M5P7G6N" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <div class="navbar-left">
+          <button class="navbar-toggler" type="button">&#9776;</button>
+          <a class="navbar-brand" href="/en">
+            <img class="logo-dark" src="https://image4.io/img/logo-dark-side.png" alt="logo">
+            <img class="logo-light" src="https://image4.io/img/logo-light-side.png" alt="logo">
+          </a>
+        </div>
+        <section class="navbar-mobile">
+          <ul class="nav nav-navbar ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/en">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/pricing">PRICING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/en/blog">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/career">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/en/contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">en<span class="arrow"></span></a>
+              <nav class="nav">
+                <a class="nav-link" href="/tr"><img src="https://cdn.image4.io/i4io/flags/tr.png?w=25&f=auto"
+                    width="25" /> Türkçe Anasayfa</a>
+                <a class="nav-link" href="/en"><img src="https://cdn.image4.io/i4io/flags/us.png?w=25&f=auto"
+                    width="25" /> English Homepage</a>
+              </nav>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </nav><!-- /.navbar -->
+    
+<!-- Main Content -->
+<main class="main-content">
+  <div class="section">
+    <div class="container">
+
+      <div class="text-center mt-8">
+        <h2>How JPEG Works in 4 “Simple” Steps</h2>
+        <time class="post-full-meta-date" datetime="2020-03-14">14 March 2020</time>,
+        <a href="https://image4.io/en/blog/tag/jpeg/">JPEG</a></p>
+      </div>
+
+      <div class="text-center my-8">
+        <img class="rounded-md" srcset="/en/blog/content/images/size/w300/2020/03/JpegIcon.png 300w,
+                            /en/blog/content/images/size/w600/2020/03/JpegIcon.png 600w,
+                            /en/blog/content/images/size/w1000/2020/03/JpegIcon.png 1000w,
+                            /en/blog/content/images/size/w2000/2020/03/JpegIcon.png 2000w" sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 700px,
+                            1400px" data-src="/en/blog/content/images/size/w2000/2020/03/JpegIcon.png" alt="How JPEG Works in 4 “Simple” Steps">
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <p>It is a known fact that JPEG is one of the most widely used image format today. Many of us possibly used it multiple times without really knowing how it works, when to use it and how it manages to reduce image size significantly. During this blog post we observe that the core principles are not too complex, at least on higher level.</p><p>To begin with, JPEG Compression consists of 4 steps which are the following,</p><p>1.       Colorspace Transform</p><p>2.       Discrete Cosine Transform</p><p>3.       Quantization</p><p>4.       Encoding</p><p><strong>1)</strong> 	<strong>Colorspace Transform</strong></p><p>		 According to the <em>JFIF standard </em>the colorspace should be transformed into YcBcR from RGB. Although colorspaces are way complicated to explain in this post, RGB stands for Red, Green and Blue which is the colorspace that many modern monitors use. On the other hand, YcBCr stands for Y as brightness and Cb/Cr for chrominance. Old analog color televisions used this colorspace. However, this fact raises a simple question: Why do we convert “new” into something “old”? Well, this is because the way we see colors. As humans we were unable to detect the colorspace difference between RGB and YCbCr which is caused by our low sensitivity against chrominance. </p><p>		 In addition to that, using YCbCr enables us to compress more efficiently without sacrificing too much from the perceived image quality and it is done by “Downsampling”. It is basically a sub-step which determines the color level reduction. Generally, the ratio of 4:2:0 is used. Which means that both in X and Y axis resolution is reduced by half. This ratio could be changed according to compression and quality needs.</p><p><strong>2)	Discrete Cosine Transform</strong></p><p>		 This is the main part which makes JPEG compression effective. Below you can see the 8x8 frequency representation of the 2-dimensional DCT which is commonly used in JPEG compression.</p><p></p><!--kg-card-begin: html--><div style="text-align: center;">
+    <img src="https://cdn.image4.io/i4io/f_auto/blog-images/DCT-8x8.png" alt="dct-8x8">
+</div><!--kg-card-end: html--><p></p><p>The top left corner represents the lowest frequency and bottom right represents the highest frequency. And that frequency is the frequency of the “cosine” wave. Also, what this representation enables us to do is that we can represent each image in that frequency form. For instance, think of an image of the 8x8 pixel chess board. We could say that, the high frequency part is represents our image more than the lower frequency parts. So, we can say that it has higher coefficient. Main purpose of discrete cosine transform is to identify the most prominent frequencies used in the image. As for the images larger than 8x8 pixels, JPEG compression uses a concept called block splitting. Which is basically splitting image into 8x8 pixel parts and checking the discrete cosine transform for each block.</p><p><strong>3)	Quantization</strong></p><p>		 This is the step where we use the coefficients which is found in the discrete cosine transform stage. In this part, we use “Quantization table” which has values that directly affects the amount of compression and corresponds to frequency removal threshold. This is the table that changes when we change JPEG quality in most of the image editing software. The table used in a following manner,</p><p>a) For each value in 8x8 block that is obtained from discrete cosine transform is divided to the corresponding value in the quantization table.</p><p>b) The result is rounded to the nearest integer.</p><p>By the end of the operation, the final table generally should have multiple “0” values on higher frequency ranges. That “0” comes from the threshold that we defined previously. For instance, if the values are higher than that threshold, they end up being a zero.</p><p><strong>4)</strong>	<strong>Encoding</strong></p><p>		 Obviously we place those zeros for a reason and this is the part where we use them. At that point we have a table of integers. To use then in encoding, we need to convert them into an integer stream. In order to do that we use a principle called “Zigzag Scan”. Which can be seen below.</p><p></p><!--kg-card-begin: html--><div style="text-align: center;">
+    <img src="https://cdn.image4.io/i4io/f_auto/blog-images/220px-JPEG-ZigZag.svg.png" alt="jpeg-zigzag">
+</div><!--kg-card-end: html--><p></p><p>In JPEG compression the “Huffman Encoding” is the general encoding method that is frequently used. It is again complicated topic which should have its own dedicated blog post, but at its core it utilizes tree structures. As a result, integer stream with multiple 0’s at the end is very beneficial to use in this algorithm.</p><p>		 To Conclude, JPEG is one of the formats that most of us use almost every single day and as we can see the combination of principles behind that is not extremely complicated but rather interesting. However, it is also necessary to state that every principle has very sophisticated and detailed versions which modern JPEG algorithms use today. This post is just a very simplistic and introductory approach to the JPEG compression.</p><p>		 As we move further to the use cases of the JPEG, we could say that it can be used in images where transparency and text sharpness is not the main concern. Since, JPEG is a lossy compression algorithm it does affect the image quality. This property of JPEG is especially more noticeable in images that has text in them. It creates artifacts around the sharp edges of the text and make it visually unpleasant. JPEG format also does not support transparency, which is also an important fact to realize. At that point using lossless formats like PNG or <a href="https://image4.io/en/blog/webp-new-format-for-web-images/">WebP </a>could be a better solution. However, if neither transparency nor text cases are present in your case, it may be a wise choice to use JPEG since it reduces image size significantly. </p><p>		 Reduced image size is especially beneficial for the websites that contain high number of images, where poorly optimized images reduce the website performance and vastly increase the <a href="https://image4.io/en/blog/5-ways-to-speed-up-your-website/">load time</a>. This obviously has multiple side effects such as decreased user retention, decreased revenue, wasted resources and so on. This is the exact problem that we have focused on solving at <a href="https://image4.io/en">image4io</a>.</p><p><strong>Resources</strong></p><p>It is highly recommended to check out explanation videos of JPEG by Mike Pound on Computerphile.</p><p>JPEG Part 0 Colourspaces: <a href="https://www.youtube.com/watch?v=LFXN9PiOGtY">https://www.youtube.com/watch?v=LFXN9PiOGtY</a></p><p>JPEG Part 1: <a href="https://www.youtube.com/watch?v=n_uNPbdenRs">https://www.youtube.com/watch?v=n_uNPbdenRs</a></p><p>JPEG Part 2 DCT: <a href="https://www.youtube.com/watch?v=Q2aEzeMDHMA">https://www.youtube.com/watch?v=Q2aEzeMDHMA</a></p><p>JPEG wiki: <a href="https://en.wikipedia.org/wiki/JPEG">https://en.wikipedia.org/wiki/JPEG</a></p><p>Chroma Subsampling: <a href="https://en.wikipedia.org/wiki/Chroma_subsampling">https://en.wikipedia.org/wiki/Chroma_subsampling</a></p><p>Discrete Cosine Transform: <a href="https://en.wikipedia.org/wiki/Discrete_cosine_transform">https://en.wikipedia.org/wiki/Discrete_cosine_transform</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      | Comments
+      |‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒‒
+      !-->
+  <div class="section bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+
+          <div id="disqus_thread"></div>
+          <script>
+            var disqus_config = function () {
+              this.page.url = "https://image4.io/en/blog/how-jpeg-works-in-4-simple-steps/";
+              this.page.identifier = "ghost-5e6cf5d15e2e2a047edd1709"
+            };
+            (function () {
+              var d = document, s = d.createElement('script');
+              s.src = 'https://image4io-en.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+        </div>
+
+      </div>
+    </div>
+</main>
+
+    <!-- Footer -->
+    <footer class="footer bg-gray">
+    <div class="container">
+        <div class="row gap-y align-items-center">
+            <div class="col-md-3 text-center text-md-left">
+                <a href="/en"><img src="https://cdn.image4.io/i4io/logo-dark.png?f=auto" alt="logo"></a>
+            </div>
+            <div class="col-md-9">
+                <div class="nav nav-bold nav-uppercase justify-content-center justify-content-md-end">
+                    <a class="nav-link" href="/en">Home</a>
+                    <a class="nav-link" href="/en/pricing">PRICING</a>
+                    <a class="nav-link active" href="/en/blog">Blog</a>
+                    <a class="nav-link" href="/en/team">Team</a>
+                    <a class="nav-link" href="/en/career">Career</a>
+                    <a class="nav-link" href="/en/contact">Contact</a>
+                </div>
+            </div>
+            <div class="col-12">
+                <hr class="my-0">
+            </div>
+            
+            <div class="col-md-6 col-xl-4">
+                <p>image4io speeds up the images&#x27;s load time of the web sites and mobile applications with its multi-CDN architecture.</p>
+            </div>
+
+            <div class="col-6 col-md-3 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Information</strong></h6>
+                <div class="nav flex-column">
+                        <a class="nav-link" href="https://image4.io/en/blog/what-is-multi-cdn/">Multi CDN</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/webp-new-format-for-web-images/">WebP</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/how-to-speed-up-your-website/">Web Performansı</a>
+                        <a class="nav-link" href="https://image4.io/en/blog/cdn-effect-on-server-performance/">CDN Etkisi</a>
+
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Product</strong></h6>
+                <div class="nav flex-column">
+                    <a class="nav-link" href="https://image4.io/en/pricing">Pricing</a>
+                    <br />
+                    <br />
+                    <br />
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-xl-2">
+                <h6 class="mb-4 mt-1"><strong>Support</strong></h6>
+                <div class="nav flex-column">
+                    <a class="nav-link" href="https://image4.io/en/documentation">Documentation</a>
+                    <a class="nav-link" href="https://image4.io/en/contact">Contact</a>
+                    <a class="nav-link" href="https://image4.io/en/privacy-policy">Privacy Policy</a>
+                    <a class="nav-link" href="https://image4.io/en/distant-sales-contract">Distant Sales Contract</a>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-xl-2 text-center">
+                <p><a class="btn btn-block btn-round btn-primary" href="https://console.image4.io">Try it free</a></p>
+            </div>
+            <div class="col-md-3 text-center text-md-left">
+                <small>&copy; 2019 Image4io. All rights reserved.</small>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="social social-sm social-hover-bg-brand">
+                    <a class="social-facebook" target="_blank" href="https://www.facebook.com/image4io"><i
+                            class="fa fa-facebook"></i></a>
+                    <a class="social-twitter" target="_blank" href="https://twitter.com/image4io"><i
+                            class="fa fa-twitter"></i></a>
+                    <a class="social-linkedin" target="_blank" href="https://www.linkedin.com/company/image4io"><i
+                            class="fa fa-linkedin"></i></a>
+                    <a class="social-git" target="_blank" href="https://github.com/Image4io"><i
+                            class="fa fa-github"></i></a>
+                    <a class="social-instagram" target="_blank" href="https://www.instagram.com/image4io/"><i
+                            class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 text-center text-md-left">
+                <a href="/tr" class="text-dark"><img src="https://cdn.image4.io/i4io/flags/tr.png?w=25&f=auto" />&nbsp;
+                    TR Home</a>&nbsp;&nbsp;
+                <a href="/en" class="text-dark"><img src="https://cdn.image4.io/i4io/flags/us.png?w=25&f=auto" />&nbsp;
+                    EN Home</a>
+            </div>
+        </div>
+    </div>
+</footer><!-- /.footer -->
+    <!-- Scripts -->
+    <script src="https://image4.io/js/site.min.js"></script>
+</body>
+
+</html>
